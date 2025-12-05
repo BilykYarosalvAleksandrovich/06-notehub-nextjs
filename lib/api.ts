@@ -62,6 +62,16 @@ export const fetchNoteById = async (id: string): Promise<Note> => {
   return res.data;
 };
 
+export async function getNoteById(id: string) {
+  const res = await fetch(`${process.env.API_URL}/notes/${id}`);
+
+  if (!res.ok) {
+    throw new Error("Note not found");
+  }
+
+  return res.json();
+}
+
 export const createNote = async (dto: CreateNoteDto): Promise<Note> => {
   try {
     const res = await api.post<Note>("/notes", dto);

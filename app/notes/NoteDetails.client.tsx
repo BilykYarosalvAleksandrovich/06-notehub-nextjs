@@ -1,10 +1,7 @@
 "use client";
 
-import { useQuery } from "@tanstack/react-query";
-import { getNoteById } from "@/lib/api"; // ✅ Оновлений шлях до API
-import { HydrationBoundary } from "@/components/TanStackProvider/TanStackProvider"; // ✅ Нова назва
-import { notFound } from "next/navigation";
-
+import { useQuery, HydrationBoundary } from "@tanstack/react-query";
+import { getNoteById } from "@/lib/api";
 import css from "./NoteDetails.module.css";
 
 interface NoteDetailsClientProps {
@@ -16,12 +13,9 @@ export default function NoteDetailsClient({
   id,
   dehydratedState,
 }: NoteDetailsClientProps) {
-  // Використовуємо useQuery для отримання даних.
-  // Якщо дані вже є у dehydratedState, useQuery одразу їх використовує (гідратація).
   const { data, isLoading, isError } = useQuery({
     queryKey: ["note", id],
     queryFn: () => getNoteById(id),
-    // Якщо нотатки немає (повернено null), useQuery кине помилку
     enabled: !!id,
   });
 
@@ -33,12 +27,7 @@ export default function NoteDetailsClient({
     );
   }
 
-  // Якщо isError true або data === null (через notFound, оброблене в SSR,
-  // або помилку API), перенаправляємо на 404
   if (isError || !data) {
-    // В ідеалі: notFound() тут не спрацює на клієнті, краще використовувати
-    // просту заглушку помилки або редірект.
-    // На рівні SSR ми обробляємо 404
     return (
       <div className={css.container}>
         <p>Note not found or an error occurred.</p>
@@ -46,7 +35,6 @@ export default function NoteDetailsClient({
     );
   }
 
-  // Якщо дані є, відображаємо їх
   const note = data;
 
   return (

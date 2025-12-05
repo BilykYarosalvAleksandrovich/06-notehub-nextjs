@@ -1,5 +1,4 @@
-import { QueryClient } from "@tanstack/react-query";
-import { dehydrate } from "@tanstack/react-query/hydration"; // ✅ Коректний імпорт dehydrate
+import { QueryClient, dehydrate } from "@tanstack/react-query";
 import { getNoteById } from "@/lib/api"; // ✅ Використовуємо getNoteById
 import { Note } from "@/types/note";
 import NoteDetailsClient from "../NoteDetails.client";

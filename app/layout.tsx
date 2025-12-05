@@ -1,5 +1,5 @@
-import { Metadata } from "next"; // ✅ Імпорт типу Metadata
-import "./globals.css"; // Ваш глобальний файл стилів
+import { Metadata } from "next";
+import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import TanStackProvider from "@/components/TanStackProvider/TanStackProvider";
@@ -7,7 +7,6 @@ import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
-// ✅ Додано тип Metadata
 export const metadata: Metadata = {
   title: "NoteHub App",
   description: "Simple and efficient application for managing personal notes.",
@@ -28,8 +27,8 @@ export default function RootLayout({
             <Footer />
           </div>
 
-          {/* 🔥 Додаємо контейнер для модального порталу */}
-          <div id="modal-root"></div>
+          {/* 🔥 Обов’язковий контейнер для React-порталів (модалок) */}
+          <div id="modal-root" />
         </TanStackProvider>
       </body>
     </html>

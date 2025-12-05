@@ -1,0 +1,48 @@
+.header {
+  display: flex;
+  justify-content: space-between; /* Розділяє логотип і навігацію */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333; /* Темний фон */
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  min-height: 60px;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+.header a:hover {
+  color: #a0a0a0; /* Трохи світліший колір при наведенні */
+}
+
+.navigation {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.navigation a {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+/* Стиль для активного посилання (якщо потрібно) */
+.navigation a.active {
+  background-color: #555;
+}

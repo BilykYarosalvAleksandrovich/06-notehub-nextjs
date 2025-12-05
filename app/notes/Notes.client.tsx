@@ -14,13 +14,14 @@ import Pagination from "@/components/Pagination/Pagination";
 import NoteList from "@/components/NoteList/NoteList";
 import Modal from "@/components/Modal/Modal";
 import NoteForm from "@/components/NoteForm/NoteForm";
+import { DehydratedState } from "@tanstack/react-query";
 
 import css from "./Notes.module.css";
 
 export default function NotesClient({
   dehydratedState,
 }: {
-  dehydratedState: unknown;
+  dehydratedState: DehydratedState | null;
 }) {
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);

@@ -1,12 +1,13 @@
 "use client";
 
 import { useQuery, HydrationBoundary } from "@tanstack/react-query";
+import { DehydratedState } from "@tanstack/react-query";
 import { getNoteById } from "@/lib/api";
 import css from "./NoteDetails.module.css";
 
 interface NoteDetailsClientProps {
   id: string;
-  dehydratedState: unknown;
+  dehydratedState: DehydratedState | null;
 }
 
 export default function NoteDetailsClient({

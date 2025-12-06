@@ -1,7 +1,7 @@
 import { QueryClient, dehydrate } from "@tanstack/react-query";
 import { getNoteById } from "@/lib/api"; // ✅ Використовуємо getNoteById
 import { Note } from "@/types/note";
-import NoteDetailsClient from "../NoteDetails.client";
+import NoteDetailsClient from "./NoteDetails.client";
 
 // Цей компонент виконується на сервері
 export default async function NoteDetailsPage({

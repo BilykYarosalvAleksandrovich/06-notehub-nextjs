@@ -1,0 +1,50 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./app/notes/[id]/NoteDetails.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************/
+.NoteDetails_container__YgHaC {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.NoteDetails_item__ta_pN {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+.NoteDetails_header__yypya h2 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-top: 0;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.NoteDetails_content__vVq3n {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  white-space: pre-wrap; /* Зберігає форматування тексту */
+  margin-bottom: 20px;
+}
+
+.NoteDetails_date__wMuPt {
+  font-size: 0.9rem;
+  color: #999;
+  text-align: right;
+  border-top: 1px dashed #eee;
+  padding-top: 10px;
+}
+
+/* Стилі для заглушок завантаження/помилки */
+.NoteDetails_container__YgHaC > p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+  padding: 50px;
+}
+
